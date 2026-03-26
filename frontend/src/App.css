@@ -1,0 +1,131 @@
+/* BarberosControl Landing Page Styles */
+
+/* Ensure smooth animations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove default button outlines but keep focus visible */
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 2px solid #f97316;
+  outline-offset: 2px;
+}
+
+/* Link hover effects */
+a {
+  text-decoration: none;
+}
+
+/* Image rendering */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Marquee adjustments */
+.rfm-marquee-container {
+  overflow: visible !important;
+}
+
+.rfm-marquee {
+  overflow: visible !important;
+}
+
+/* Carousel card hover effect */
+.rfm-child {
+  overflow: visible !important;
+}
+
+/* Card hover animations - specific properties only */
+.group:hover {
+  border-color: rgba(249, 115, 22, 0.3);
+}
+
+/* Button styles - ensure proper rendering */
+.glow-orange {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-orange::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.glow-orange:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Glass effect enhancement */
+.glass {
+  position: relative;
+}
+
+.glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 50%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Product shadow animation */
+.product-shadow {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product-shadow:hover {
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 30px 60px -20px rgba(0, 0, 0, 0.9),
+    0 0 120px rgba(249, 115, 22, 0.15);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .glass {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+}
+
+/* Ensure proper z-index layering */
+nav {
+  z-index: 100;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Feature cards grid responsiveness */
+@media (max-width: 768px) {
+  .grid-cols-12 > * {
+    grid-column: span 12 !important;
+  }
+}
+
+/* Marquee card responsiveness */
+@media (max-width: 640px) {
+  .rfm-child {
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+  }
+}
