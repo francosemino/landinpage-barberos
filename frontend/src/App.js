@@ -20,7 +20,7 @@ import { Button } from "./components/ui/button";
 
 // Configuration
 const CONFIG = {
-  whatsapp: "https://wa.me/5492914675931?text=Hola!%20Quiero%20probar%20BarberosControl",
+  whatsapp: "https://app.barberoscontrol.com/register",
   login: "https://app.barberoscontrol.com/",
 };
 
@@ -147,7 +147,7 @@ const Logo = ({ size = "default" }) => {
   const textSize = size === "large" ? "text-4xl sm:text-5xl lg:text-6xl" : size === "small" ? "text-lg sm:text-xl" : "text-xl sm:text-2xl";
   return (
     <span className={`font-black tracking-tight ${textSize} whitespace-nowrap`} style={{ fontFamily: "'Outfit', sans-serif" }}>
-      Barber<span className="text-orange-500">os</span>Control
+      Barberos<span className="text-orange-500">Control</span>
     </span>
   );
 };
