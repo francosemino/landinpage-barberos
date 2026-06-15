@@ -10,29 +10,30 @@ import { REGISTER_URL, PROMO_CODE } from "@/lib/constants";
 const plans = [
   {
     name: "Premium",
-    tagline: "Ideal para barberos independientes",
-    price: "$_____",
+    tagline: "Ideal para barberias",
+    price: "$27.000",
     period: "/ mes",
     features: [
-      "[ Agregá una característica ]",
-      "[ Agregá otra característica ]",
-      "[ Agregá otra característica ]",
-      "[ Agregá otra característica ]",
+      "Registro de servicios y ventas",
+      "Agenda de turnos",
+      "Caja y liquidacion",
+      "BarberClub",
+      "Reportes",
     ],
     cta: "Empezar prueba",
     highlight: false,
   },
   {
     name: "Salón Avanzado",
-    tagline: "Para barberías con múltiples sillones",
-    price: "$_____",
+    tagline: "Ideal si tenes mas de una sucursal o una peluqueria",
+    price: "$37.000",
     period: "/ mes",
     features: [
-      "[ Agregá una característica ]",
-      "[ Agregá otra característica ]",
-      "[ Agregá otra característica ]",
-      "[ Agregá otra característica ]",
-      "[ Agregá otra característica ]",
+      "Todo lo del Plan Premium ",
+      "Sucursales",
+      "Servicio de Mujeres o Hombres ",
+      "Confirmacion de turnos por Whatsapp",
+      "Beneficios ilimitados",
     ],
     cta: "Empezar prueba",
     highlight: true,
@@ -105,9 +106,6 @@ export default function Pricing() {
                 </span>
                 <span className="text-zinc-500 text-sm">{p.period}</span>
               </div>
-              <p className="mt-1 text-xs text-zinc-600 italic">
-                [ Editá este precio cuando definas el valor ]
-              </p>
 
               <div className="mt-8 h-px bg-[#1f1f1f]" />
 
@@ -144,11 +142,6 @@ export default function Pricing() {
             </motion.div>
           ))}
         </div>
-
-        <p className="mt-8 text-center text-xs text-zinc-600 italic max-w-xl mx-auto">
-          Esta sección está lista para que completes precios y características reales
-          de cada plan.
-        </p>
       </div>
     </section>
   );
