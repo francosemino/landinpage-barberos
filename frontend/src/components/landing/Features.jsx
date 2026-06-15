@@ -59,9 +59,6 @@ export default function Features() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl"
         >
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#FF5500]">
-            Funciones principales
-          </span>
           <h2 className="font-display mt-4 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
             Todo tu negocio, <span className="text-[#FF5500]">en un solo lugar.</span>
           </h2>

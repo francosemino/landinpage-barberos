@@ -1,4 +1,4 @@
-import { Scissors, MessageCircle, Globe } from "lucide-react";
+import { MessageCircle, Globe } from "lucide-react";
 import { NAV_LINKS, APP_URL, WHATSAPP_NUMBER, WHATSAPP_URL } from "@/lib/constants";
 
 export default function Footer() {
