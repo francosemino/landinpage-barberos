@@ -1,0 +1,157 @@
+{
+  "project_name": "BarberosControl Landing Page",
+  "domain": "SaaS / Barber Shop Management",
+  "theme": "Dark",
+  "archetype": "5 (Luxury) mixed with 4 (Swiss High-Contrast)",
+  "vibe": "Modern, elegant, clean, tech, startup premium, barber shop aesthetics",
+  "design_principles": [
+    "High-end SaaS aesthetic with dark backgrounds and subtle neon orange glow.",
+    "No generic layouts; use bento grids and asymmetric features presentation.",
+    "Typography must be large, confident, and modern.",
+    "Micro-interactions: Hover effects on cards, soft glow on buttons, smooth scroll."
+  ],
+  "colors": {
+    "background_base": "#0A0A0A",
+    "background_card": "#141414",
+    "background_card_hover": "#1C1C1C",
+    "border_subtle": "#262626",
+    "border_focus": "#333333",
+    "primary": "#FF5500",
+    "primary_hover": "#FF7733",
+    "primary_glow": "rgba(255, 85, 0, 0.15)",
+    "text_main": "#FFFFFF",
+    "text_muted": "#A1A1AA",
+    "text_inverse": "#000000"
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "heading_font_url": "https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&display=swap",
+    "body_font": "Manrope",
+    "body_font_url": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap",
+    "scales": {
+      "h1": "text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight",
+      "h2": "text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight",
+      "h3": "text-xl md:text-2xl font-semibold",
+      "body": "text-base md:text-lg text-[#A1A1AA] leading-relaxed",
+      "overline": "text-sm font-bold uppercase tracking-[0.2em] text-[#FF5500]"
+    }
+  },
+  "spacing_and_layout": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "section_padding": "py-20 md:py-32",
+    "border_radius": {
+      "card": "rounded-2xl",
+      "button": "rounded-xl",
+      "badge": "rounded-full"
+    },
+    "shadows": {
+      "card": "shadow-lg shadow-black/50",
+      "glow": "shadow-[0_0_40px_-10px_rgba(255,85,0,0.3)]",
+      "glow_hover": "shadow-[0_0_60px_-15px_rgba(255,85,0,0.5)]"
+    }
+  },
+  "components": {
+    "navbar": {
+      "style": "Fixed top-0 w-full z-50 transition-all duration-300",
+      "state_top": "bg-transparent py-6",
+      "state_scrolled": "bg-[#0A0A0A]/80 backdrop-blur-xl border-b border-[#262626] py-4 shadow-lg",
+      "links": ["Inicio", "Funciones", "BarberClub", "Turnos Online", "Reportes", "Precios"],
+      "mobile_menu": "Hamburger menu opening a full-screen dark overlay with large links"
+    },
+    "hero": {
+      "headline": "Tu barbería. Tu negocio. En tus manos.",
+      "promo_badge": "CÓDIGO PROMOCIONAL: MESPRUEBA (Primer mes gratis)",
+      "cta_primary": {
+        "text": "Registrarse Gratis",
+        "url": "https://app.barberoscontrol.com/register",
+        "style": "bg-[#FF5500] hover:bg-[#FF7733] text-white font-bold py-4 px-8 rounded-xl transition-all shadow-[0_0_20px_-5px_rgba(255,85,0,0.4)] hover:shadow-[0_0_30px_-5px_rgba(255,85,0,0.6)]"
+      },
+      "cta_secondary": {
+        "text": "Contactar Ventas",
+        "url": "https://wa.me/542914675931?text=Hola,%20quiero%20averiguar%20por%20BarberosControl",
+        "style": "bg-[#141414] border border-[#262626] hover:border-[#FF5500] text-white py-4 px-8 rounded-xl transition-all"
+      },
+      "mockups": "Realistic Notebook and Phone composition. Use CSS/JSX structural elements to create a sleek dark-mode dashboard wireframe inside the screens. They must animate floating gently."
+    },
+    "problem_curiosity": {
+      "layout": "Grid 1x2 or Bento style",
+      "items_count": 4,
+      "style": "Dark cards with subtle 1px border. On hover, apply a soft orange inner glow."
+    },
+    "features": {
+      "list": [
+        "Registro de cortes",
+        "Gestión de clientes",
+        "Agenda de turnos",
+        "Turnos online",
+        "Ganancias y liquidación",
+        "Caja diaria",
+        "BarberClub / Socios",
+        "Reportes mensuales",
+        "Control de productos",
+        "Multiusuario"
+      ],
+      "layout": "Bento grid (mix of col-span-1 and col-span-2) or dense 3-column grid.",
+      "icons": "Use lucide-react (linear, modern).",
+      "card_style": "bg-[#141414] border border-[#262626] rounded-2xl p-6 hover:-translate-y-1 hover:border-[#FF5500]/50 transition-all duration-300"
+    },
+    "barber_club_highlight": {
+      "style": "Full-width section with dark image background overlay (use image_urls), heavy vignette, large typography, emphasizing exclusivity."
+    },
+    "how_it_works": {
+      "steps": 3,
+      "layout": "Horizontal timeline or staggered vertical cards with connecting lines."
+    },
+    "pricing": {
+      "plans": [
+        {
+          "name": "Premium",
+          "placeholder": "Ideal para barberos independientes"
+        },
+        {
+          "name": "Salón Avanzado",
+          "placeholder": "Para barberías con múltiples sillones"
+        }
+      ],
+      "style": "Cards with deep dark background. Highlight the 'Salón Avanzado' with a glowing orange border and an 'Recomendado' badge."
+    },
+    "footer": {
+      "style": "py-12 border-t border-[#262626] bg-[#0A0A0A]",
+      "elements": "Logo, navigation links, contact info, copyright."
+    },
+    "floating_whatsapp": {
+      "url": "https://wa.me/542914675931?text=Hola,%20quiero%20averiguar%20por%20BarberosControl",
+      "style": "Fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform z-50 flex items-center justify-center",
+      "icon": "WhatsApp Icon (lucide-react or react-icons)"
+    }
+  },
+  "animations": {
+    "scroll": "Use Lenis for smooth scrolling.",
+    "reveal": "Framer Motion: initial { opacity: 0, y: 20 }, whileInView { opacity: 1, y: 0 } with staggered children.",
+    "hover_glow": "Add glowing shadows on hover. Scale up icons slightly."
+  },
+  "media": {
+    "images": {
+      "hero_background_overlay": {
+        "url": "https://images.unsplash.com/photo-1700938550585-50ab9f83e075?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhcmslMjB0ZXh0dXJlJTIwb3JhbmdlJTIwZ2xvd3xlbnwwfHx8fDE3ODEyMjg2MzB8MA&ixlib=rb-4.1.0&q=85",
+        "usage": "Use as an absolute background with opacity-20 and mix-blend-screen for a subtle fiery/orange aura in the hero."
+      },
+      "barber_club_bg": {
+        "url": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxiYXJiZXIlMjBzaG9wJTIwZGFyayUyMG1vZGVybnxlbnwwfHx8fDE3ODEyMjg2MzB8MA&ixlib=rb-4.1.0&q=85",
+        "usage": "Use in the BarberClub Highlight section with a heavy #0A0A0A gradient overlay (opacity 80%) so text is highly readable."
+      }
+    }
+  },
+  "instructions_to_main_agent": [
+    "Create a React/Tailwind application strictly following this JSON.",
+    "Implement the laptop and phone mockups purely with CSS/Tailwind (using dark divs, subtle borders, and placeholder skeleton rectangles) instead of external images, as the user will later swap them for real app screenshots.",
+    "All elements must use the Argentine Spanish copy specified.",
+    "No generic layout - apply 'E1' principles: bento grids, asymmetry, and generous paddings (p-12 to p-24).",
+    "Ensure 'data-testid' is added to all interactive elements (buttons, links, form inputs) using kebab-case role-based naming.",
+    "Integrate lucide-react for all iconography.",
+    "Do not include any backend forms. The CTA buttons MUST link directly to the provided external URLs.",
+    "Never use pure black or grey without a slight tint. Use the exact hex codes provided in 'colors'.",
+    "Ensure hover states and animations strictly use Framer Motion and Tailwind transitions.",
+    "Design the pricing cards as distinct placeholder cards ready for user editing."
+  ]
+}
