@@ -30,16 +30,6 @@ const clients = [
   },
   {
     type: "text",
-    name: "La Calle Club",
-    font: "font-display font-bold tracking-wider uppercase",
-  },
-  {
-    type: "text",
-    name: "Sosa Studio",
-    font: "font-display font-black tracking-tight italic",
-  },
-  {
-    type: "text",
     name: "King's Barber Co.",
     font: "font-display font-semibold tracking-widest uppercase",
   },
