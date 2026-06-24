@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Scissors } from "lucide-react";
 import { NAV_LINKS, REGISTER_URL } from "@/lib/constants";
+import { trackMetaLead } from "@/lib/utils";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -56,6 +57,7 @@ export default function Navbar() {
             href={REGISTER_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackMetaLead("navbar_register_button")}
             data-testid="navbar-register-btn"
             className="hidden sm:inline-flex items-center justify-center rounded-xl bg-[#FF5500] hover:bg-[#FF7733] text-white text-sm font-semibold py-2.5 px-5 transition-all shadow-[0_0_25px_-8px_rgba(255,85,0,0.6)] hover:shadow-[0_0_35px_-8px_rgba(255,85,0,0.8)]"
           >
@@ -102,7 +104,10 @@ export default function Navbar() {
                 href={REGISTER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  trackMetaLead("navbar_mobile_register_button");
+                  setOpen(false);
+                }}
                 data-testid="mobile-register-btn"
                 className="mt-6 inline-flex items-center justify-center rounded-xl bg-[#FF5500] hover:bg-[#FF7733] text-white font-semibold py-4 px-6 transition-all"
               >

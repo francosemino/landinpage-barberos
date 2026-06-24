@@ -2,8 +2,23 @@ import { motion } from "framer-motion";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
 import Mockups from "./Mockups";
 import { REGISTER_URL, PROMO_CODE } from "@/lib/constants";
+import { trackMetaLead } from "@/lib/utils";
 
 export default function Hero() {
+  const trackRegisterClick = () => {
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq("track", "Lead", {
+        content_name: "hero_register_button",
+      });
+
+      window.fbq("track", "StartTrial", {
+        content_name: "hero_register_button",
+        value: 0,
+        currency: "ARS",
+      });
+    }
+  };
+
   return (
     <section
       id="inicio"
@@ -16,7 +31,6 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Copy */}
           <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -64,12 +78,14 @@ export default function Hero() {
                 href={REGISTER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackMetaLead("hero_register_button")}
                 data-testid="hero-register-btn"
                 className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[#FF5500] hover:bg-[#FF7733] text-white font-semibold py-4 px-7 transition-all shadow-[0_0_30px_-8px_rgba(255,85,0,0.7)] hover:shadow-[0_0_50px_-8px_rgba(255,85,0,0.9)] hover:-translate-y-0.5"
               >
                 Registrarme ahora
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
+
               <a
                 href="#funciones"
                 data-testid="hero-demo-btn"
@@ -101,7 +117,6 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Mockups */}
           <div className="relative">
             <Mockups />
           </div>

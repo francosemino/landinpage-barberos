@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { REGISTER_URL, WHATSAPP_URL } from "@/lib/constants";
+import { trackMetaLead } from "@/lib/utils";
 
 export default function FinalCTA() {
   return (
@@ -32,6 +33,7 @@ export default function FinalCTA() {
             href={REGISTER_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackMetaLead("final_cta_register_button")}
             data-testid="final-register-btn"
             className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[#FF5500] hover:bg-[#FF7733] text-white font-semibold py-4 px-8 transition-all shadow-[0_0_40px_-8px_rgba(255,85,0,0.7)] hover:shadow-[0_0_60px_-8px_rgba(255,85,0,0.9)] hover:-translate-y-0.5"
           >
