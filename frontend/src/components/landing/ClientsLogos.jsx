@@ -33,7 +33,7 @@ const clients = [
     src: "/logos/fenix.png",
     name: "Fenix Barbershop",
     filter: "brightness(1.4) contrast(1.05)",
-    scale: 1.9,
+    scale: 2.6,
   },
   {
     type: "text",
