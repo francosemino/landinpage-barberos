@@ -29,6 +29,13 @@ const clients = [
     scale: 1.15,
   },
   {
+    type: "image",
+    src: "/logos/fenix.png",
+    name: "Fenix Barbershop",
+    filter: "brightness(1.4) contrast(1.05)",
+    scale: 1.9,
+  },
+  {
     type: "text",
     name: "King's Barber Co.",
     font: "font-display font-semibold tracking-widest uppercase",
