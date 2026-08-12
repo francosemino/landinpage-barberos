@@ -2,16 +2,24 @@ import { motion } from "framer-motion";
 import { Check, Sparkles } from "lucide-react";
 import { REGISTER_URL, PROMO_CODE } from "@/lib/constants";
 
-/**
- * Pricing cards left as editable placeholders.
- * The user requested to leave sections where they can fill in
- * "what's included" and price for each plan.
- */
 const plans = [
+  {
+    name: "Básico",
+    tagline: "Para barberos independientes",
+    price: "$17.000",
+    period: "/ mes",
+    features: [
+      "Agenda de turnos",
+      "Registro de servicios",
+      "Historial de servicios y clientes",
+    ],
+    cta: "Empezar prueba",
+    highlight: false,
+  },
   {
     name: "Premium",
     tagline: "Ideal para barberias",
-    price: "$27.000",
+    price: "$35.000",
     period: "/ mes",
     features: [
       "Registro de servicios y ventas",
@@ -21,12 +29,12 @@ const plans = [
       "Reportes",
     ],
     cta: "Empezar prueba",
-    highlight: false,
+    highlight: true,
   },
   {
     name: "Salón Avanzado",
     tagline: "Ideal si tenes mas de una sucursal o una peluqueria",
-    price: "$37.000",
+    price: "$49.000",
     period: "/ mes",
     features: [
       "Todo lo del Plan Premium ",
@@ -36,7 +44,7 @@ const plans = [
       "Beneficios ilimitados",
     ],
     cta: "Empezar prueba",
-    highlight: true,
+    highlight: false,
   },
 ];
 
@@ -45,7 +53,7 @@ export default function Pricing() {
     <section
       id="precios"
       data-testid="pricing-section"
-      className="relative py-16 md:py-28 border-t border-[#171717]"
+      className="relative py-16 md:py-28 border-t border-[#171717] overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#FF5500]/8 blur-[140px] rounded-full" />
@@ -73,7 +81,7 @@ export default function Pricing() {
           </p>
         </motion.div>
 
-        <div className="mt-14 grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {plans.map((p, i) => (
             <motion.div
               key={p.name}
