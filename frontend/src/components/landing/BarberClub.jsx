@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Crown, Heart, TrendingUp, Users2, RefreshCcw, Sparkles } from "lucide-react";
 import { REGISTER_URL } from "@/lib/constants";
+import barberClubBg from "@/assets/images/barberclub-bg.webp";
 
 const benefits = [
   { icon: Heart, label: "Fidelización real" },
@@ -18,12 +19,12 @@ export default function BarberClub() {
       className="relative py-16 md:py-28 overflow-hidden border-t border-[#171717]"
     >
       <div className="absolute inset-0 pointer-events-none">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-25"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxiYXJiZXIlMjBzaG9wJTIwZGFyayUyMG1vZGVybnxlbnwwfHx8fDE3ODEyMjg2MzB8MA&ixlib=rb-4.1.0&q=85')",
-          }}
+        <img
+          src={barberClubBg}
+          alt=""
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/85 to-[#0A0A0A]/70" />
         <div className="absolute -bottom-20 -right-20 w-[400px] h-[400px] bg-[#FF5500]/15 blur-[120px] rounded-full" />

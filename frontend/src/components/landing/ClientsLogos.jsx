@@ -1,36 +1,40 @@
 import { motion } from "framer-motion";
 import { Scissors } from "lucide-react";
+import bongioLogo from "@/assets/images/bongio.webp";
+import estilofLogo from "@/assets/images/estilof.webp";
+import tril3xLogo from "@/assets/images/tril3x.webp";
+import fenixLogo from "@/assets/images/fenix.webp";
 
 /**
- * Logos reales (imágenes en /public/logos) + nombres ilustrativos (texto).
- * Para sumar más barberías reales, copiá la estructura `{ type: 'image', ... }`
- * y subí el archivo a /app/frontend/public/logos/.
+ * Logos reales (imágenes en src/assets/images) + nombres ilustrativos (texto).
+ * Para sumar más barberías reales, importá el archivo webp acá arriba y
+ * agregá una entrada `{ type: 'image', ... }` con ese import como `src`.
  */
 const clients = [
   {
     type: "image",
-    src: "/logos/bongio.png",
+    src: bongioLogo,
     name: "Bongio Barber",
     filter: "brightness(1.4) contrast(1.05)",
     scale: 1.9,
   },
   {
     type: "image",
-    src: "/logos/estilof.png",
+    src: estilofLogo,
     name: "Estilo F Peluqueros",
     filter: "brightness(1.25) contrast(1.2)",
     scale: 1.45,
   },
   {
     type: "image",
-    src: "/logos/tril3x.png",
+    src: tril3xLogo,
     name: "Tril3x Barbershop",
     filter: "brightness(1.25) contrast(1.2)",
     scale: 1.15,
   },
   {
     type: "image",
-    src: "/logos/fenix.png",
+    src: fenixLogo,
     name: "Fenix Barbershop",
     filter: "brightness(1.4) contrast(1.05)",
     scale: 2.6,
