@@ -1,0 +1,7 @@
+{
+  "buildCommand": "echo 'Sitio estático, no requiere build'",
+  "installCommand": "echo 'Sin dependencias'",
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false
+}
