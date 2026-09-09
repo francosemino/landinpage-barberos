@@ -11,7 +11,7 @@
 <link rel="canonical" href="https://www.barberoscontrol.com/">
 
 <!-- Favicon (SVG inline, sin archivos externos) -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0b'/%3E%3Cdefs%3E%3CclipPath id='fE'%3E%3Cpolygon points='8,8 58,8 40,92 8,92'/%3E%3C/clipPath%3E%3CclipPath id='fC'%3E%3Cpolygon points='92,8 66,8 48,92 92,92'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23fE)'%3E%3Crect x='14' y='16' width='13' height='68' fill='%23ff5a1f'/%3E%3Crect x='14' y='16' width='50' height='14' fill='%23ff5a1f'/%3E%3Crect x='14' y='43' width='46' height='14' fill='%23ff5a1f'/%3E%3Crect x='14' y='70' width='50' height='14' fill='%23ff5a1f'/%3E%3C/g%3E%3Cg clip-path='url(%23fC)'%3E%3Ccircle cx='66' cy='50' r='24' fill='none' stroke='%23ffffff' stroke-width='15'/%3E%3Crect x='80' y='38' width='24' height='24' fill='%230a0a0b'/%3E%3C/g%3E%3Cline x1='63' y1='6' x2='45' y2='94' stroke='%23ff5a1f' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0b'/%3E%3Cdefs%3E%3CclipPath id='fE'%3E%3Cpolygon points='8,8 58,8 40,92 8,92'/%3E%3C/clipPath%3E%3CclipPath id='fC'%3E%3Cpolygon points='92,8 66,8 48,92 92,92'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23fE)'%3E%3Crect x='14' y='16' width='13' height='68' fill='%23ff5a1f'/%3E%3Crect x='14' y='16' width='50' height='14' fill='%23ff5a1f'/%3E%3Crect x='14' y='43' width='46' height='14' fill='%23ff5a1f'/%3E%3Crect x='14' y='70' width='50' height='14' fill='%23ff5a1f'/%3E%3C/g%3E%3Cg clip-path='url(%23fC)'%3E%3Cpath d='M 84.38,65.43 A 24,24 0 1,1 84.38,34.57' fill='none' stroke='%23ffffff' stroke-width='15' stroke-linecap='round'/%3E%3C/g%3E%3Cline x1='63' y1='6' x2='45' y2='94' stroke='%23ff5a1f' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -335,13 +335,6 @@ body.nav-open{overflow:hidden}
 /* ===========================================================
    11. PRECIOS
    =========================================================== */
-.billing-toggle{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:46px}
-.billing-toggle span{font-size:.92rem;font-weight:800;color:var(--text-dim)}
-.billing-toggle span.active{color:var(--text)}
-.switch{position:relative;width:52px;height:30px;border-radius:999px;background:var(--surface-2);border:1px solid var(--border);flex-shrink:0}
-.switch::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:var(--gradient-warm);transition:transform .3s var(--ease)}
-.switch[aria-checked="true"]::after{transform:translateX(22px)}
-.save-badge{font-size:.72rem;font-weight:800;color:var(--on-accent);background:var(--accent-2);padding:3px 8px;border-radius:999px}
 .pricing-grid{display:grid;gap:22px;grid-template-columns:1fr}
 .price-card{position:relative;background:var(--surface);border:1px solid var(--border-soft);border-radius:var(--radius-lg);padding:32px 28px;display:flex;flex-direction:column;transition:transform .3s var(--ease),border-color .3s var(--ease)}
 .price-card:hover{transform:translateY(-6px)}
@@ -353,7 +346,6 @@ body.nav-open{overflow:hidden}
 .price-amount .currency{font-size:1.1rem;font-weight:800;color:var(--text-dim)}
 .price-amount .value{font-size:2.4rem;font-weight:800;font-variant-numeric:tabular-nums}
 .price-amount .period{font-size:.9rem;color:var(--text-faint)}
-.price-billed{font-size:.78rem;color:var(--text-faint);margin-top:4px;min-height:16px}
 .price-card .btn{margin-top:24px;width:100%}
 .price-features{margin-top:26px;display:flex;flex-direction:column;gap:12px}
 .price-features li{display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:var(--text-dim)}
@@ -464,13 +456,12 @@ body.nav-open{overflow:hidden}
             <rect x="6" y="76" width="60" height="16" fill="#FF5A1F"/>
           </g>
           <g clip-path="url(#hdrClipC)">
-            <circle cx="70" cy="50" r="30" fill="none" stroke="#FFFFFF" stroke-width="18"/>
-            <rect x="88" y="34" width="30" height="32" fill="#0A0A0B"/>
+            <path d="M 92.98,69.28 A 30,30 0 1,1 92.98,30.72" fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round"/>
           </g>
           <line x1="59" y1="6" x2="37" y2="94" stroke="#FF5A1F" stroke-width="3" stroke-linecap="round"/>
         </svg>
       </span>
-      BarberosControl
+      Barberos<span class="accent">Control</span>
     </a>
     <nav class="main-nav" aria-label="Navegación principal">
       <ul>
@@ -851,19 +842,12 @@ body.nav-open{overflow:hidden}
         <p>Empezá con lo esencial y subí de plan cuando tu barbería crezca.</p>
       </div>
 
-      <div class="billing-toggle reveal">
-        <span class="active" id="labelMonthly">Mensual</span>
-        <button class="switch" id="billingSwitch" role="switch" aria-checked="false" aria-label="Cambiar a facturación anual"></button>
-        <span id="labelAnnual">Anual <span class="save-badge">Ahorrás ~18%</span></span>
-      </div>
-
       <div class="pricing-grid">
         <!-- Plan Básico -->
-        <div class="price-card reveal" data-monthly="17000" data-annual="14000" data-annual-total="168000">
+        <div class="price-card reveal">
           <h3>Básico</h3>
           <p class="plan-desc">Para empezar a ordenar tu agenda y tus clientes.</p>
           <div class="price-amount"><span class="currency">$</span><span class="value price-value">17.000</span><span class="period">/mes</span></div>
-          <p class="price-billed"></p>
           <a href="https://app.barberoscontrol.com/register" class="btn btn-secondary" target="_blank" rel="noopener">Registrarme ahora</a>
           <ul class="price-features">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Agenda de turnos online 24/7</li>
@@ -875,12 +859,11 @@ body.nav-open{overflow:hidden}
         </div>
 
         <!-- Plan Premium (destacado) -->
-        <div class="price-card featured reveal reveal-delay-1" data-monthly="37000" data-annual="30000" data-annual-total="360000">
+        <div class="price-card featured reveal reveal-delay-1">
           <span class="price-badge">Recomendado</span>
           <h3>Premium</h3>
           <p class="plan-desc">Todo lo del Básico + caja, liquidación y BarberClub.</p>
           <div class="price-amount"><span class="currency">$</span><span class="value price-value">37.000</span><span class="period">/mes</span></div>
-          <p class="price-billed"></p>
           <a href="https://app.barberoscontrol.com/register" class="btn btn-primary" target="_blank" rel="noopener">Registrarme ahora</a>
           <ul class="price-features">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> <strong>Todo lo del plan Básico</strong></li>
@@ -893,11 +876,10 @@ body.nav-open{overflow:hidden}
         </div>
 
         <!-- Plan Salón Avanzado -->
-        <div class="price-card reveal reveal-delay-2" data-monthly="48000" data-annual="40000" data-annual-total="480000">
+        <div class="price-card reveal reveal-delay-2">
           <h3>Salón Avanzado</h3>
           <p class="plan-desc">Para cadenas y salones con varias sucursales.</p>
           <div class="price-amount"><span class="currency">$</span><span class="value price-value">48.000</span><span class="period">/mes</span></div>
-          <p class="price-billed"></p>
           <a href="https://app.barberoscontrol.com/register" class="btn btn-secondary" target="_blank" rel="noopener">Registrarme ahora</a>
           <ul class="price-features">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> <strong>Todo lo del plan Premium</strong></li>
@@ -984,13 +966,12 @@ body.nav-open{overflow:hidden}
                 <rect x="6" y="76" width="60" height="16" fill="#FF5A1F"/>
               </g>
               <g clip-path="url(#ftrClipC)">
-                <circle cx="70" cy="50" r="30" fill="none" stroke="#FFFFFF" stroke-width="18"/>
-                <rect x="88" y="34" width="30" height="32" fill="#0A0A0B"/>
+                <path d="M 92.98,69.28 A 30,30 0 1,1 92.98,30.72" fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round"/>
               </g>
               <line x1="59" y1="6" x2="37" y2="94" stroke="#FF5A1F" stroke-width="3" stroke-linecap="round"/>
             </svg>
           </span>
-          BarberosControl
+          Barberos<span class="accent">Control</span>
         </a>
         <p>El sistema de gestión para barberías que centraliza turnos, caja, liquidación de socios y BarberClub.</p>
         <div class="footer-social">
@@ -1149,36 +1130,6 @@ body.nav-open{overflow:hidden}
     });
   }
 
-  /* ---------- Toggle de facturación mensual / anual ---------- */
-  function setupBilling(){
-    const sw = document.getElementById("billingSwitch");
-    const labelMonthly = document.getElementById("labelMonthly");
-    const labelAnnual = document.getElementById("labelAnnual");
-    if (!sw) return;
-    function apply(annual){
-      sw.setAttribute("aria-checked", annual ? "true" : "false");
-      labelMonthly && labelMonthly.classList.toggle("active", !annual);
-      labelAnnual && labelAnnual.classList.toggle("active", annual);
-      document.querySelectorAll(".price-card").forEach(function(card){
-        const monthly = card.dataset.monthly;
-        const annualPrice = card.dataset.annual;
-        const annualTotal = card.dataset.annualTotal;
-        const valueEl = card.querySelector(".price-value");
-        const billedEl = card.querySelector(".price-billed");
-        if (!valueEl) return;
-        const price = annual ? annualPrice : monthly;
-        valueEl.textContent = Number(price).toLocaleString("es-AR");
-        if (billedEl){
-          billedEl.textContent = annual ? ("Facturado $" + Number(annualTotal).toLocaleString("es-AR") + " por año") : "";
-        }
-      });
-    }
-    sw.addEventListener("click", function(){
-      apply(sw.getAttribute("aria-checked") !== "true");
-    });
-    apply(false);
-  }
-
   /* ---------- Línea conectora de "Cómo funciona" ---------- */
   function setupStepsLine(){
     const steps = document.querySelector(".steps");
@@ -1192,7 +1143,6 @@ body.nav-open{overflow:hidden}
     setupHeaderScroll();
     setupMobileNav();
     setupFaq();
-    setupBilling();
     setupStepsLine();
   });
 })();
