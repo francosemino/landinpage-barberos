@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Básico",
+    "price": "17.000",
+    "desc": "Para empezar a ordenar tu agenda y tus clientes.",
+    "features": [
+      "Agenda de turnos online 24/7",
+      "Registro de cortes y servicios",
+      "Historial y ficha de clientes",
+      "1 barbero / usuario",
+      "Soporte por WhatsApp"
+    ]
+  },
+  {
+    "name": "Premium",
+    "price": "37.000",
+    "desc": "Todo lo del Básico + caja, liquidación y BarberClub.",
+    "features": [
+      "Todo lo del plan Básico",
+      "Caja diaria y liquidación de socios",
+      "BarberClub: membresías y beneficios",
+      "Reportes de ingresos y productos",
+      "Turnos por WhatsApp (confirmación y recordatorio)",
+      "Hasta 5 barberos / usuarios"
+    ]
+  },
+  {
+    "name": "Salón Avanzado",
+    "price": "48.000",
+    "desc": "Para cadenas y salones con varias sucursales.",
+    "features": [
+      "Todo lo del plan Premium",
+      "Multi-sucursales",
+      "Multiusuarios ilimitados con permisos por rol",
+      "WhatsApp ilimitado",
+      "Beneficios y membresías ilimitadas"
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+BARBEROSCONTROL — LANDING RENOVADA
+
+Empezá por docs/LEEME.md: incluye instrucciones de instalación y publicación.
+
+Para probar en Windows, abrí una terminal en esta carpeta:
+
+py -m http.server 5500 --bind 127.0.0.1
+
+Después abrí http://localhost:5500
+
+No necesita npm ni compilación. Publicá index.html, assets y los archivos
+favicon/robots/sitemap/manifest en la raíz de la landing actual.
+No reemplaces el frontend del sistema de gestión.
+
+Guías:
+- docs/LEEME.md
+- docs/GOOGLE-FAVICON.md
+- docs/VIDEO.md
+- docs/ESTRATEGIA.md
+- docs/vistas/ contiene capturas del código implementado.
