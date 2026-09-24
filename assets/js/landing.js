@@ -32,7 +32,7 @@
   $$('[data-screenshot]').forEach(frame => {
     const entry = screenshots[frame.dataset.screenshot];
     if (!entry?.src) return;
-    const img = new Image(); img.alt = entry.alt || 'Captura de BarberosControl'; img.loading = 'lazy';
+    const img = new Image(); img.alt = entry.alt || 'Captura de BarberosControl'; img.decoding = 'async';
     img.addEventListener('load', () => { frame.classList.add('has-screenshot'); });
     img.addEventListener('error', () => { img.remove(); frame.classList.remove('has-screenshot'); });
     img.src = entry.src; frame.append(img);
