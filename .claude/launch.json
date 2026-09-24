@@ -6,6 +6,19 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["--prefix", "frontend", "start"],
       "port": 3000
+    },
+    {
+      "name": "sistema-demo",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "../barber/frontend", "start"],
+      "port": 3000,
+      "env": { "BROWSER": "none" }
+    },
+    {
+      "name": "landing",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5500", "--bind", "127.0.0.1"],
+      "port": 5500
     }
   ]
 }
