@@ -4,9 +4,9 @@
    No video, caption or testimonial is invented by the landing. */
 window.BC_LANDING = {
   screenshots: {
-    desktop: { src: "", alt: "Agenda de BarberosControl en computadora" },
-    booking: { src: "", alt: "Reserva de turnos desde el celular" },
-    client: { src: "", alt: "Panel del cliente con sus turnos y beneficios" }
+    desktop: { src: "assets/images/capturas/dashboard.webp", alt: "Dashboard de BarberosControl en computadora: servicios e ingresos del día y del mes" },
+    booking: { src: "assets/images/capturas/panel-celular.webp", alt: "Menú del panel de gestión de BarberosControl en el celular" },
+    client: { src: "assets/images/capturas/panel-socio.webp", alt: "Panel del socio en el celular con sus beneficios y visitas" }
   },
   video: {
     src: "",
