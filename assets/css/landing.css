@@ -45,3 +45,12 @@
 .steps-cta p{color:var(--muted);font-size:12px}
 @media(max-width:850px){.steps-section{padding-top:60px}.steps-intro{margin-bottom:50px}.steps-list{gap:70px}.step,.step:nth-child(even){grid-template-columns:1fr;gap:28px}.step:nth-child(even) .step-copy{order:0}.step-num{font-size:38px}.steps-cta{margin-top:60px}}
 @media(max-width:600px){.steps-intro{text-align:left}.step h3{font-size:24px}.step-chips li{font-size:8px}.step-shot-phone{width:min(250px,80%)}}
+
+/* Botón flotante de WhatsApp */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:45;display:flex;align-items:center;gap:10px;height:56px;padding:0 16px 0 14px;border-radius:999px;background:#25d366;color:#fff;font-size:13px;font-weight:800;text-decoration:none;box-shadow:0 12px 30px #0000006b,0 0 0 4px #25d3661f;transition:transform .18s,box-shadow .18s}
+.wa-float:hover{transform:translateY(-2px);box-shadow:0 16px 36px #00000080,0 0 0 6px #25d36626}
+.wa-float:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.wa-float svg{width:28px;height:28px;flex-shrink:0}
+@media(max-width:850px){.wa-float{padding:0;width:56px;justify-content:center}.wa-float-label{display:none}}
+@media(max-width:600px){.wa-float{right:16px;bottom:calc(84px + env(safe-area-inset-bottom));width:52px;height:52px}.wa-float svg{width:26px;height:26px}}
+@media(prefers-reduced-motion:reduce){.wa-float{transition:none}}
