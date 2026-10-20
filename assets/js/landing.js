@@ -62,4 +62,46 @@
     video.addEventListener('error', () => { $('#video-error').hidden = false; });
     video.addEventListener('ended', () => track('bc_video_complete'));
   }
+  // Reseñas: solo se muestran las aprobadas en el sistema. Nada se inventa:
+  // si no hay reseñas o la API falla, la sección sigue oculta.
+  const reviewsSection = $('#resenas');
+  const reviewsApi = window.BC_LANDING?.reviewsApi;
+  if (reviewsSection && reviewsApi && 'fetch' in window) {
+    const starString = (value) => '★★★★★'.slice(0, value) + '☆☆☆☆☆'.slice(0, 5 - value);
+    const el = (tag, className, text) => {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text !== undefined) node.textContent = text;
+      return node;
+    };
+    fetch(reviewsApi, { headers: { Accept: 'application/json' } })
+      .then(response => (response.ok ? response.json() : null))
+      .then(data => {
+        const reviews = Array.isArray(data?.reviews) ? data.reviews : [];
+        if (!reviews.length) return;
+        const list = $('#reviews-list');
+        reviews.forEach(review => {
+          const rating = Math.max(1, Math.min(5, Number(review.rating) || 5));
+          const card = el('figure', 'review-card');
+          card.setAttribute('role', 'listitem');
+          const stars = el('span', 'reviews-stars', starString(rating));
+          stars.setAttribute('aria-label', rating + ' de 5 estrellas');
+          card.append(stars, el('blockquote', '', review.text));
+          const caption = el('figcaption');
+          caption.append(el('strong', '', review.author_name), el('span', '', [review.shop_name, review.city].filter(Boolean).join(' · ')));
+          card.append(caption);
+          list.append(card);
+        });
+        if (data.average) {
+          $('#reviews-average').textContent = Number(data.average).toFixed(1).replace('.', ',');
+          $('#reviews-average-stars').textContent = starString(Math.round(data.average));
+          $('#reviews-count').textContent = data.count === 1 ? '1 reseña' : data.count + ' reseñas';
+        } else {
+          $('.reviews-score').hidden = true;
+        }
+        reviewsSection.hidden = false;
+        track('bc_reviews_shown', { count: reviews.length });
+      })
+      .catch(() => {});
+  }
 })();
