@@ -8,6 +8,9 @@ window.BC_LANDING = {
     booking: { src: "assets/images/capturas/reserva.webp", alt: "Reserva online confirmada desde el celular del cliente" },
     client: { src: "assets/images/capturas/panel-socio.webp", alt: "Panel del socio en el celular con sus beneficios y visitas" }
   },
+  // Reseñas aprobadas desde el SuperAdmin del sistema. Si no hay ninguna
+  // (o la API no responde) la sección queda oculta.
+  reviewsApi: "https://barber-c1hr.onrender.com/api/public/reviews",
   video: {
     src: "",
     poster: "",
