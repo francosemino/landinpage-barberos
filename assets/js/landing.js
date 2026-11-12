@@ -38,6 +38,33 @@
     img.src = entry.src; frame.append(img);
   });
 
+  // Precios por país: Argentina en pesos, el resto en dólares. Elige solo
+  // según la zona horaria del navegador y se puede cambiar con los botones.
+  const regionButtons = $$('.price-region button');
+  if (regionButtons.length) {
+    let timeZone = '';
+    try { timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (error) { timeZone = ''; }
+    const isMxOrUs = /^America\/(Mexico_City|Cancun|Merida|Monterrey|Matamoros|Chihuahua|Ciudad_Juarez|Ojinaga|Mazatlan|Bahia_Banderas|Hermosillo|Tijuana|New_York|Chicago|Denver|Phoenix|Los_Angeles|Anchorage|Detroit|Boise|Indiana\/.*|Kentucky\/.*)$|^Pacific\/Honolulu$/.test(timeZone);
+    const setRegion = (region, manual = false) => {
+      regionButtons.forEach(button => {
+        const active = button.dataset.region === region;
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+      $$('.plan-price').forEach(price => {
+        const value = region === 'usd' && isMxOrUs ? price.dataset.usdMx : price.dataset[region];
+        const label = price.querySelector('small');
+        if (price.firstChild && value) price.firstChild.textContent = value;
+        if (label && label.dataset[region]) label.textContent = label.dataset[region];
+      });
+      const note = $('[data-region-note]');
+      if (note) note.hidden = region !== 'usd' || isMxOrUs;
+      if (manual) track('bc_price_region', { region });
+    };
+    regionButtons.forEach(button => button.addEventListener('click', () => setRegion(button.dataset.region, true)));
+    if (timeZone && !/^America\/(Argentina\/.*|Buenos_Aires|Cordoba|Mendoza)$/.test(timeZone)) setRegion('usd');
+  }
+
   const videoConfig = window.BC_LANDING?.video || {};
   if (videoConfig.src) {
     const trigger = $('[data-open-video]');
